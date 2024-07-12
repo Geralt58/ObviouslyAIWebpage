@@ -1,0 +1,26 @@
+.inputElement {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 12px;
+
+	label {
+		font-weight: bold;
+	}
+
+	input {
+		border: none;
+		font-size: 12px;
+	}
+}
+
+.sizeSmall {
+	gap: 8px;
+	label {
+		font-size: 12px;
+	}
+
+	input {
+		font-size: 8px;
+	}
+}

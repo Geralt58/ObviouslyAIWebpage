@@ -1,0 +1,158 @@
+.settings {
+	position: relative;
+	width: 100%;
+	padding: 24px 32px 24px 48px;
+
+	button {
+		background-color: #657fff;
+		border: 0;
+		color: white;
+		font-weight: bold;
+		font-size: 16px;
+		border-radius: 5px;
+		padding: 32px;
+		box-shadow: 1px 1px 5px 1px rgb(196, 195, 195);
+		cursor: pointer;
+	}
+
+	button:hover {
+		background-color: #94a6ff;
+	}
+
+	button:active {
+		background-color: #384fc0;
+	}
+
+	& > svg {
+		position: absolute;
+		top: -45px;
+		right: 0;
+		z-index: -9999;
+		width: fit-content;
+		height: 780px;
+	}
+
+	.article {
+		margin-top: 180px;
+		color: #3c3c52;
+		padding-bottom: 16px;
+		h1 {
+			font-family: 'HammersmithOne';
+			font-weight: lighter;
+			font-size: 40px;
+		}
+	}
+
+	.inputForm {
+		.cardGrid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 16px;
+			padding-bottom: 16px;
+
+			& > :nth-child(9) {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 16px;
+			}
+
+			& > :nth-last-child(2) {
+				grid-column: 2 / span 2;
+			}
+
+			& > :last-child {
+				grid-column: 1 / span 3;
+			}
+
+			.multiOptionCard {
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				h4 {
+					padding-bottom: 12px;
+				}
+				> div > p {
+					font-size: 12px;
+					padding-bottom: 20px;
+				}
+				h5 {
+					font-size: 16px;
+					font-weight: normal;
+					padding-bottom: 10px;
+				}
+				footer {
+					font-size: 12px;
+				}
+
+				.dataSelection {
+					display: flex;
+					flex-direction: column;
+					gap: 12px;
+					padding-bottom: 16px;
+
+					.otherPlansCards {
+						display: flex;
+						flex-direction: column;
+						gap: 12px;
+					}
+
+					.existingusersCard {
+						display: grid;
+						grid-template-columns: repeat(2, 1fr);
+						gap: 8px;
+						padding-right: 150px;
+					}
+				}
+
+				.inviteUser {
+					display: grid;
+					grid-template-columns: 4fr 4fr 1fr;
+					gap: 16px;
+					padding-bottom: 20px;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 970px) {
+		& > svg {
+			height: 70vw;
+		}
+	}
+
+	@media (max-width: 840px) {
+		.inputForm {
+			.cardGrid {
+				grid-template-columns: auto;
+
+				& > :nth-child(9) {
+					display: grid;
+					grid-template-columns: 1fr;
+					gap: 16px;
+				}
+
+				& > :nth-last-child(2) {
+					grid-column: 1;
+				}
+
+				& > :last-child {
+					grid-column: 1;
+				}
+
+				.multiOptionCard {
+					.dataSelection {
+						.existingusersCard {
+							grid-template-columns: 1fr;
+							padding-right: 0;
+						}
+					}
+					.inviteUser {
+						display: grid;
+						grid-template-columns: 1fr;
+					}
+				}
+			}
+		}
+	}
+}

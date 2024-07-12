@@ -1,0 +1,46 @@
+.detailsCard {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 8px;
+
+	article {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		padding: 0;
+
+		h6 {
+			font-size: 12px;
+		}
+
+		p {
+			font-size: 8px;
+		}
+	}
+
+	.infoTypeButton {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 8px;
+
+		.option {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 4px;
+			cursor: pointer;
+
+			p {
+				font-size: 8px;
+				padding: 0;
+			}
+		}
+	}
+
+	p {
+		font-size: 10px;
+	}
+}

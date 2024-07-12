@@ -1,0 +1,56 @@
+.expandMenu {
+	padding-bottom: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+	.expandMenuHeader {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		h4 {
+			font-weight: normal;
+			margin: 0;
+			padding: 0;
+		}
+
+		.toggleButton {
+			background-color: transparent;
+			align-items: center;
+			border: none;
+			font-size: 16px;
+			cursor: pointer;
+		}
+	}
+
+	.expandMenuList {
+		padding-top: 8px;
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		li {
+			display: flex;
+			align-items: center;
+		}
+
+		li:not(:last-child):before {
+			content: '○';
+			margin-right: 10px;
+			color: gray;
+		}
+
+		.showAll {
+			color: gray;
+			font-weight: bold;
+			font-size: 12px;
+		}
+	}
+
+	.unExpandedText {
+		p {
+			font-size: 10px;
+			color: #c5c5c5;
+		}
+	}
+}

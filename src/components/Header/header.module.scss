@@ -1,0 +1,15 @@
+.header {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 24px;
+	list-style-type: none;
+
+	li {
+		display: flex;
+		align-items: center;
+		font-family: 'HammersmithOne';
+		color: #3c3c52;
+		cursor: pointer;
+	}
+}

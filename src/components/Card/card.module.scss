@@ -1,0 +1,26 @@
+.card {
+	box-shadow: 1px 1px 5px 0px rgb(153, 153, 153);
+	padding: 20px;
+	border-radius: 4px;
+	background-color: white;
+}
+
+.greenBackground {
+	background-color: #00bf6e;
+}
+
+.paddingSmall {
+	padding: 16px 12px;
+	box-shadow: none;
+	border: 1px rgb(212, 212, 212) solid;
+}
+
+.boxshadowSmall {
+	box-shadow: 1px 1px 5px 0px rgb(192, 192, 192);
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
