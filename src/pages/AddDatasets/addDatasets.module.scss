@@ -2,6 +2,7 @@
 	position: relative;
 	width: 100%;
 	padding: 24px 32px 24px 48px;
+	margin-left: 450px;
 
 	& > svg {
 		position: absolute;
@@ -181,5 +182,11 @@
 				}
 			}
 		}
+	}
+}
+
+@media (max-width: 1250px) {
+	.addDatasets {
+		margin-left: 0;
 	}
 }

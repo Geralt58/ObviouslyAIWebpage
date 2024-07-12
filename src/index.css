@@ -16,4 +16,5 @@ body,
 #root,
 .App {
 	height: 100%;
+	overflow: auto;
 }

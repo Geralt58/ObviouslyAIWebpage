@@ -10,13 +10,19 @@ import { IoSettingsOutline } from 'react-icons/io5'
 import { IoSettingsSharp } from 'react-icons/io5'
 import { MdOutlineHelpOutline } from 'react-icons/md'
 import { PiToggleLeft } from 'react-icons/pi'
+import { RxCross2 } from 'react-icons/rx'
 
-const Sidebar = () => {
+const Sidebar = ({ toggleSidebar, isHamburgerVisible }) => {
 	const location = useLocation()
 
 	return (
 		<div className={style.sidebar}>
 			<div className={style.sidebarSection}>
+				{isHamburgerVisible && (
+					<div className={style.cross} onClick={toggleSidebar}>
+						<RxCross2 />
+					</div>
+				)}
 				<div className={style.header}>
 					<img src={logo} alt="ObviouslyAI" />
 					<PiToggleLeft size="28px" />

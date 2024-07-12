@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Sidebar from 'components/Sidebar/Sidebar'
 import AddDatasets from 'pages/AddDatasets/AddDatasets'
 import Settings from 'pages/Settings/Settings'
-import { RxCross2 } from 'react-icons/rx'
 
 const AppRouter = () => {
 	const [isSidebarVisible, setIsSidebarVisible] = useState(true)
@@ -33,10 +32,10 @@ const AppRouter = () => {
 		<BrowserRouter>
 			{isHamburgerVisible && (
 				<button className="hamburger" onClick={toggleSidebar}>
-					{isSidebarVisible ? <RxCross2 size={12} /> : '☰'}
+					☰
 				</button>
 			)}
-			{isSidebarVisible && <Sidebar />}
+			{isSidebarVisible && <Sidebar toggleSidebar={toggleSidebar} isHamburgerVisible={isHamburgerVisible} />}
 			<Routes>
 				<Route path="/" element={<Navigate to="/add-dataset" />} exact />
 				<Route path="/add-dataset" element={<AddDatasets />} />

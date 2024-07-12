@@ -1,11 +1,20 @@
 .sidebar {
-	height: 100%;
+	position: fixed;
+	height: 100vh;
 	width: 450px;
 	background-color: #f5f5f5;
 	padding: 40px;
 	display: flex;
 	flex-direction: column;
 	gap: 24px;
+	z-index: 9999;
+
+	.cross {
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		cursor: pointer;
+	}
 
 	.sidebarSection {
 		border-bottom: 1px #ebebeb solid;
@@ -50,7 +59,7 @@
 	}
 
 	@media (max-width: 1250px) {
-		position: absolute;
+		position: fixed;
 		width: 40%;
 		z-index: 9999;
 	}

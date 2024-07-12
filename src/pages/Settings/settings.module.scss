@@ -2,6 +2,7 @@
 	position: relative;
 	width: 100%;
 	padding: 24px 32px 24px 48px;
+	margin-left: 450px;
 
 	button {
 		background-color: #657fff;
@@ -154,5 +155,11 @@
 				}
 			}
 		}
+	}
+}
+
+@media (max-width: 1250px) {
+	.settings {
+		margin-left: 0;
 	}
 }
