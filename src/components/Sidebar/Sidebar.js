@@ -15,6 +15,12 @@ import { RxCross2 } from 'react-icons/rx'
 const Sidebar = ({ toggleSidebar, isHamburgerVisible }) => {
 	const location = useLocation()
 
+	const handleNavigationSidebar = () => {
+		if (isHamburgerVisible) {
+			toggleSidebar()
+		}
+	}
+
 	return (
 		<div className={style.sidebar}>
 			<div className={style.sidebarSection}>
@@ -36,7 +42,7 @@ const Sidebar = ({ toggleSidebar, isHamburgerVisible }) => {
 						<LuBook size="20px" />
 						Definitions
 					</li>
-					<NavLink to="/settings">
+					<NavLink to="/settings" onClick={handleNavigationSidebar}>
 						{location.pathname === '/settings' ? (
 							<li className={style.menuSelected}>
 								<IoSettingsSharp size="22px" />
